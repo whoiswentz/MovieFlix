@@ -1,5 +1,5 @@
 //
-//  UpcomingViewController.swift
+//  SearchViewController.swift
 //  MovieFlix
 //
 //  Created by Vinicios Wentz on 09/08/23.
@@ -7,12 +7,12 @@
 
 import UIKit
 
-class UpcomingViewController: UIViewController {
+class SearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemRed
+        
+        view.backgroundColor = .systemPink
     }
     
 
