@@ -82,6 +82,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD1F2ADC2A85C02B0027F0E3 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		BD1F2ADD2A85C0330027F0E3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		BD1F2ADE2A85C0480027F0E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BD1F2ADF2A85C06E0027F0E3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BD1F2AE02A85C0760027F0E3 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		BDB7ED3E2A83D50800C6AD42 = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +140,11 @@
 		BDB7ED492A83D50800C6AD42 /* MovieFlix */ = {
 			isa = PBXGroup;
 			children = (
+				BD1F2AE02A85C0760027F0E3 /* Managers */,
+				BD1F2ADF2A85C06E0027F0E3 /* Resources */,
+				BD1F2ADE2A85C0480027F0E3 /* Models */,
+				BD1F2ADD2A85C0330027F0E3 /* ViewModels */,
+				BD1F2ADC2A85C02B0027F0E3 /* Views */,
 				BDB7ED7A2A84161100C6AD42 /* Controllers */,
 				BDB7ED4A2A83D50800C6AD42 /* AppDelegate.swift */,
 				BDB7ED4C2A83D50800C6AD42 /* SceneDelegate.swift */,
