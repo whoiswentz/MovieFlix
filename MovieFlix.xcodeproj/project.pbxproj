@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD1F2AE22A86C8180027F0E3 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1F2AE12A86C8180027F0E3 /* CollectionViewTableViewCell.swift */; };
 		BDB7ED4B2A83D50800C6AD42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7ED4A2A83D50800C6AD42 /* AppDelegate.swift */; };
 		BDB7ED4D2A83D50800C6AD42 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7ED4C2A83D50800C6AD42 /* SceneDelegate.swift */; };
 		BDB7ED4F2A83D50800C6AD42 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7ED4E2A83D50800C6AD42 /* MainTabBarViewController.swift */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BD1F2AE12A86C8180027F0E3 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
 		BDB7ED472A83D50800C6AD42 /* MovieFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDB7ED4A2A83D50800C6AD42 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BDB7ED4C2A83D50800C6AD42 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 		BD1F2ADC2A85C02B0027F0E3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BD1F2AE12A86C8180027F0E3 /* CollectionViewTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			files = (
 				BDB7ED802A84170900C6AD42 /* SearchViewController.swift in Sources */,
 				BDB7ED4F2A83D50800C6AD42 /* MainTabBarViewController.swift in Sources */,
+				BD1F2AE22A86C8180027F0E3 /* CollectionViewTableViewCell.swift in Sources */,
 				BDB7ED822A84173100C6AD42 /* DownloadsViewController.swift in Sources */,
 				BDB7ED4B2A83D50800C6AD42 /* AppDelegate.swift in Sources */,
 				BDB7ED4D2A83D50800C6AD42 /* SceneDelegate.swift in Sources */,
