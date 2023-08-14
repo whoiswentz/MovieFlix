@@ -22,6 +22,7 @@
 		BDB7ED822A84173100C6AD42 /* DownloadsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7ED812A84173100C6AD42 /* DownloadsViewController.swift */; };
 		BDC2AD412A87FB5200C40B89 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD402A87FB5200C40B89 /* HeroHeaderUIView.swift */; };
 		BDC2AD462A880F8900C40B89 /* DefaultUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD452A880F8900C40B89 /* DefaultUIButton.swift */; };
+		BDC2AD482A89A85B00C40B89 /* TMDBApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD472A89A85B00C40B89 /* TMDBApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		BDB7ED812A84173100C6AD42 /* DownloadsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadsViewController.swift; sourceTree = "<group>"; };
 		BDC2AD402A87FB5200C40B89 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		BDC2AD452A880F8900C40B89 /* DefaultUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUIButton.swift; sourceTree = "<group>"; };
+		BDC2AD472A89A85B00C40B89 /* TMDBApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 		BD1F2AE02A85C0760027F0E3 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				BDC2AD472A89A85B00C40B89 /* TMDBApi.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				BDB7ED4F2A83D50800C6AD42 /* MainTabBarViewController.swift in Sources */,
 				BD1F2AE22A86C8180027F0E3 /* CollectionViewTableViewCell.swift in Sources */,
 				BDC2AD412A87FB5200C40B89 /* HeroHeaderUIView.swift in Sources */,
+				BDC2AD482A89A85B00C40B89 /* TMDBApi.swift in Sources */,
 				BDB7ED822A84173100C6AD42 /* DownloadsViewController.swift in Sources */,
 				BDB7ED4B2A83D50800C6AD42 /* AppDelegate.swift in Sources */,
 				BDB7ED4D2A83D50800C6AD42 /* SceneDelegate.swift in Sources */,

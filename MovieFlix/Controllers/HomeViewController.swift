@@ -36,6 +36,11 @@ class HomeViewController: UIViewController {
         ]
     }
     
+    private func getTrendingMovies() {
+        TMDBApi.shared.getTrendingMovies { _ in
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
@@ -48,6 +53,7 @@ class HomeViewController: UIViewController {
         homeFeedTable.tableHeaderView = headerView
         
         setupNavbar()
+        getTrendingMovies()
     }
     
     override func viewDidLayoutSubviews() {
