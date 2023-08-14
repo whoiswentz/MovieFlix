@@ -37,7 +37,13 @@ class HomeViewController: UIViewController {
     }
     
     private func getTrendingMovies() {
-        TMDBApi.shared.getTrendingMovies { _ in
+        TMDBApi.shared.getTrendingMovies { results in
+        switch results {
+        case .success(let movies):
+            print(movies)
+        case .failure(let error):
+            print(error)
+        }
         }
     }
     
