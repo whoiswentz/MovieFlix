@@ -11,8 +11,8 @@ class HomeViewController: UIViewController {
     
     private let sectionTitles: [String] = [
         "Trending Movies",
-        "Popular",
         "Trending Tv",
+        "Popular",
         "Upcoming Movie",
         "Top Rated"
     ]
@@ -37,13 +37,19 @@ class HomeViewController: UIViewController {
     }
     
     private func getTrendingMovies() {
-        TMDBApi.shared.getTrendingMovies { results in
-        switch results {
-        case .success(let movies):
-            print(movies)
-        case .failure(let error):
-            print(error)
-        }
+//        TMDBApi.shared.getTrendingMovies { results in
+//        switch results {
+//        case .success(let movies):
+//
+//        case .failure(let error):
+//
+//        }
+//        }
+    }
+    
+    private func getTrendingTvs() {
+        Task {
+            print(await TMDBApi.shared.getTrendingTvs())
         }
     }
     
@@ -60,6 +66,7 @@ class HomeViewController: UIViewController {
         
         setupNavbar()
         getTrendingMovies()
+        getTrendingTvs()
     }
     
     override func viewDidLayoutSubviews() {
@@ -87,7 +94,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         header.textLabel?.font = .systemFont(ofSize: 18, weight: .semibold)
         header.textLabel?.frame = CGRect(x: header.bounds.origin.x + 20, y: header.bounds.origin.y, width: 100, height: header.bounds.height)
         header.textLabel?.textColor = .systemBackground
-        header.textLabel?.text = header.textLabel?.text?.lowercased()
+        header.textLabel?.text = header.textLabel?.text?.capitalizeFirstLetter()
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
