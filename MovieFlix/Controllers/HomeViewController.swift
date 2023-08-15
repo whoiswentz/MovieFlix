@@ -49,7 +49,7 @@ class HomeViewController: UIViewController {
     
     private func getTrendingTvs() {
         Task {
-            print(await TMDBApi.shared.getTrendingTvs())
+            print(await TMDBApi.shared.getTopRatedMovies())
         }
     }
     

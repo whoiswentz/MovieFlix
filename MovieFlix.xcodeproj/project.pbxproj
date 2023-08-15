@@ -23,11 +23,12 @@
 		BDC2AD412A87FB5200C40B89 /* HeroHeaderUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD402A87FB5200C40B89 /* HeroHeaderUIView.swift */; };
 		BDC2AD462A880F8900C40B89 /* DefaultUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD452A880F8900C40B89 /* DefaultUIButton.swift */; };
 		BDC2AD482A89A85B00C40B89 /* TMDBApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD472A89A85B00C40B89 /* TMDBApi.swift */; };
-		BDC2AD4A2A8AAF6F00C40B89 /* TrendingMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD492A8AAF6F00C40B89 /* TrendingMovieResponse.swift */; };
-		BDC2AD4C2A8AAFB500C40B89 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD4B2A8AAFB400C40B89 /* Movie.swift */; };
+		BDC2AD4A2A8AAF6F00C40B89 /* TrendingTitleResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD492A8AAF6F00C40B89 /* TrendingTitleResponse.swift */; };
+		BDC2AD4C2A8AAFB500C40B89 /* Title.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD4B2A8AAFB400C40B89 /* Title.swift */; };
 		BDC2AD4E2A8AF98500C40B89 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD4D2A8AF98500C40B89 /* Extensions.swift */; };
-		BDC2AD502A8B0ABD00C40B89 /* TrendingTvResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD4F2A8B0ABD00C40B89 /* TrendingTvResponse.swift */; };
-		BDC2AD522A8B0AD800C40B89 /* Tv.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD512A8B0AD800C40B89 /* Tv.swift */; };
+		BDC2AD542A8BB43400C40B89 /* UpcomingMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD532A8BB43400C40B89 /* UpcomingMovieResponse.swift */; };
+		BDC2AD562A8BC7E800C40B89 /* PopularMovieResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD552A8BC7E800C40B89 /* PopularMovieResponse.swift */; };
+		BDC2AD582A8BC97400C40B89 /* TopRatedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD572A8BC97400C40B89 /* TopRatedResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,11 +69,12 @@
 		BDC2AD402A87FB5200C40B89 /* HeroHeaderUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroHeaderUIView.swift; sourceTree = "<group>"; };
 		BDC2AD452A880F8900C40B89 /* DefaultUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultUIButton.swift; sourceTree = "<group>"; };
 		BDC2AD472A89A85B00C40B89 /* TMDBApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TMDBApi.swift; sourceTree = "<group>"; };
-		BDC2AD492A8AAF6F00C40B89 /* TrendingMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingMovieResponse.swift; sourceTree = "<group>"; };
-		BDC2AD4B2A8AAFB400C40B89 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		BDC2AD492A8AAF6F00C40B89 /* TrendingTitleResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTitleResponse.swift; sourceTree = "<group>"; };
+		BDC2AD4B2A8AAFB400C40B89 /* Title.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Title.swift; sourceTree = "<group>"; };
 		BDC2AD4D2A8AF98500C40B89 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		BDC2AD4F2A8B0ABD00C40B89 /* TrendingTvResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrendingTvResponse.swift; sourceTree = "<group>"; };
-		BDC2AD512A8B0AD800C40B89 /* Tv.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tv.swift; sourceTree = "<group>"; };
+		BDC2AD532A8BB43400C40B89 /* UpcomingMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieResponse.swift; sourceTree = "<group>"; };
+		BDC2AD552A8BC7E800C40B89 /* PopularMovieResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularMovieResponse.swift; sourceTree = "<group>"; };
+		BDC2AD572A8BC97400C40B89 /* TopRatedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,10 +121,11 @@
 		BD1F2ADE2A85C0480027F0E3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BDC2AD492A8AAF6F00C40B89 /* TrendingMovieResponse.swift */,
-				BDC2AD4B2A8AAFB400C40B89 /* Movie.swift */,
-				BDC2AD4F2A8B0ABD00C40B89 /* TrendingTvResponse.swift */,
-				BDC2AD512A8B0AD800C40B89 /* Tv.swift */,
+				BDC2AD492A8AAF6F00C40B89 /* TrendingTitleResponse.swift */,
+				BDC2AD4B2A8AAFB400C40B89 /* Title.swift */,
+				BDC2AD532A8BB43400C40B89 /* UpcomingMovieResponse.swift */,
+				BDC2AD552A8BC7E800C40B89 /* PopularMovieResponse.swift */,
+				BDC2AD572A8BC97400C40B89 /* TopRatedResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -353,16 +356,17 @@
 				BDB7ED4F2A83D50800C6AD42 /* MainTabBarViewController.swift in Sources */,
 				BD1F2AE22A86C8180027F0E3 /* CollectionViewTableViewCell.swift in Sources */,
 				BDC2AD412A87FB5200C40B89 /* HeroHeaderUIView.swift in Sources */,
+				BDC2AD542A8BB43400C40B89 /* UpcomingMovieResponse.swift in Sources */,
+				BDC2AD562A8BC7E800C40B89 /* PopularMovieResponse.swift in Sources */,
 				BDC2AD482A89A85B00C40B89 /* TMDBApi.swift in Sources */,
 				BDB7ED822A84173100C6AD42 /* DownloadsViewController.swift in Sources */,
 				BDB7ED4B2A83D50800C6AD42 /* AppDelegate.swift in Sources */,
-				BDC2AD502A8B0ABD00C40B89 /* TrendingTvResponse.swift in Sources */,
+				BDC2AD582A8BC97400C40B89 /* TopRatedResponse.swift in Sources */,
 				BDB7ED4D2A83D50800C6AD42 /* SceneDelegate.swift in Sources */,
-				BDC2AD4C2A8AAFB500C40B89 /* Movie.swift in Sources */,
-				BDC2AD4A2A8AAF6F00C40B89 /* TrendingMovieResponse.swift in Sources */,
+				BDC2AD4C2A8AAFB500C40B89 /* Title.swift in Sources */,
+				BDC2AD4A2A8AAF6F00C40B89 /* TrendingTitleResponse.swift in Sources */,
 				BDC2AD462A880F8900C40B89 /* DefaultUIButton.swift in Sources */,
 				BDB7ED7E2A84168500C6AD42 /* UpcomingViewController.swift in Sources */,
-				BDC2AD522A8B0AD800C40B89 /* Tv.swift in Sources */,
 				BDB7ED7C2A84166400C6AD42 /* HomeViewController.swift in Sources */,
 				BDC2AD4E2A8AF98500C40B89 /* Extensions.swift in Sources */,
 			);

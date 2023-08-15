@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Movie: Codable {
+struct Title: Codable {
     let id: Int
     let media_type: String?
     let original_name: String?
