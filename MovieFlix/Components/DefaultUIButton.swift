@@ -19,7 +19,7 @@ class DefaultUIButton: UIButton {
     }
     
     private func setupButton() {
-        layer.borderColor = UIColor.systemBackground.cgColor
+        layer.borderColor = UIColor.white.cgColor
         layer.borderWidth = 1
         layer.cornerRadius = 5
         translatesAutoresizingMaskIntoConstraints = false
