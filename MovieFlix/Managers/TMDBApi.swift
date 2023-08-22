@@ -92,6 +92,21 @@ class TMDBApi {
         }
     }
     
+    func getDiscoveryMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
+        guard let url = URL(string: "\(Constants.baseUrl)/3/discover/movie?api_key=\(Constants.API_KEY)&include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc") else {
+            return completion(.failure(APIError.invalidUrl))
+        }
+        
+        makeRequest(url: url) { (result: Result<TopRatedResponse, Error>) in
+            switch result {
+            case .success(let result):
+                completion(.success(result.results))
+            case .failure(_):
+                completion(.failure(APIError.failedToGetData))
+            }
+        }
+    }
+    
     private func makeRequest<T: Codable>(url: URL, completion: @escaping (Result<T, Error>) -> Void) {
         URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data = data, error == nil else {return}
