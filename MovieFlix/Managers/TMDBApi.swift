@@ -107,6 +107,23 @@ class TMDBApi {
         }
     }
     
+    func search(query: String, completion: @escaping (Result<[Title], Error>) -> Void) {
+        guard let query = query.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) else { return }
+        
+        guard let url = URL(string: "\(Constants.baseUrl)/3/search/movie?api_key=\(Constants.API_KEY)&query=\(query)") else {
+            return completion(.failure(APIError.invalidUrl))
+        }
+        
+        makeRequest(url: url) { (result: Result<TopRatedResponse, Error>) in
+            switch result {
+            case .success(let result):
+                completion(.success(result.results))
+            case .failure(_):
+                completion(.failure(APIError.failedToGetData))
+            }
+        }
+    }
+    
     private func makeRequest<T: Codable>(url: URL, completion: @escaping (Result<T, Error>) -> Void) {
         URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
             guard let data = data, error == nil else {return}
