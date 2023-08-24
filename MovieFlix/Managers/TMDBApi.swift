@@ -17,7 +17,7 @@ enum APIError: Error {
     case failedToGetData
 }
 
-class TMDBApi {
+class TMDBApi: APIManager {
     static let shared = TMDBApi()
     
     func getTrendingMovies(completion: @escaping (Result<[Title], Error>) -> Void) {
@@ -123,21 +123,4 @@ class TMDBApi {
             }
         }
     }
-    
-    private func makeRequest<T: Codable>(url: URL, completion: @escaping (Result<T, Error>) -> Void) {
-        URLSession.shared.dataTask(with: URLRequest(url: url)) { data, _, error in
-            guard let data = data, error == nil else {return}
-            
-            do {
-                let decoder = JSONDecoder()
-                let results = try decoder.decode(T.self, from: data)
-                completion(.success(results))
-            } catch {
-                print(error.localizedDescription)
-                completion(.failure(error))
-            }
-        }.resume()
-    }
-    
-    
 }
