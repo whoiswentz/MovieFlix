@@ -25,7 +25,6 @@ class YoutubeAPI: APIManager {
         guard let url = URL(string: "\(YoutubeConstants.baseUrl)?key=\(YoutubeConstants.API_KEY)&q=\(query)") else { return }
         
         makeRequest(url: url) { (result: Result<YoutubeSearchResponse, Error>) in
-            print(result)
             switch result {
             case .success(let response):
                 completion(.success(response.items[0]))

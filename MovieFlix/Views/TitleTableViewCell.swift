@@ -10,6 +10,8 @@ import UIKit
 class TitleTableViewCell: UITableViewCell {
     static let identifier = "TitleTableViewCell"
     
+    weak var delegate: CollectionViewTableViewCellDelegate?
+    
     private let titlePosterUIImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
@@ -66,7 +68,7 @@ class TitleTableViewCell: UITableViewCell {
         
         let titleLabelConstraints = [
             titleLabel.leadingAnchor.constraint(equalTo: titlePosterUIImageView.trailingAnchor, constant: 20),
-            titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            titleLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor),
         ]
         
         let playButtonConstraint = [

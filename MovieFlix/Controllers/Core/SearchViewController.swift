@@ -42,6 +42,7 @@ class SearchViewController: UIViewController {
         searchController.searchResultsUpdater = self
         
         fetchDiscoveryMovies()
+
     }
     
     override func viewDidLayoutSubviews() {
