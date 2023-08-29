@@ -16,14 +16,10 @@ enum Sections: Int {
 }
 
 class HomeViewController: UIViewController {
+    private let sectionTitles: [String] = ["Trending Movies", "Trending Tv", "Popular", "Upcoming Movie", "Top Rated"]
     
-    private let sectionTitles: [String] = [
-        "Trending Movies",
-        "Trending Tv",
-        "Popular",
-        "Upcoming Movie",
-        "Top Rated"
-    ]
+    private var randonTrendingMovie: Title?
+    private var headerView: HeroHeaderUIView?
     
     private let homeFeedTable: UITableView = {
         let tableView = UITableView(frame: .zero, style: .grouped)
@@ -52,15 +48,29 @@ class HomeViewController: UIViewController {
         homeFeedTable.delegate = self
         homeFeedTable.dataSource = self
         
-        let headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
+        headerView = HeroHeaderUIView(frame: CGRect(x: 0, y: 0, width: view.bounds.width, height: 450))
         homeFeedTable.tableHeaderView = headerView
         
         setupNavbar()
+        configureHeroeHeaderView()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         homeFeedTable.frame = view.bounds
+    }
+    
+    private func configureHeroeHeaderView() {
+        TMDBApi.shared.getTrendingMovies { [weak self] result in
+            switch result {
+            case .success(let titles):
+                let selectedTitle = titles.randomElement()
+                self?.randonTrendingMovie = selectedTitle
+                self?.headerView?.configure(with: TitleViewModel(titleName: selectedTitle?.original_title ?? "", posterURL: selectedTitle?.poster_path ?? ""))
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
     }
 }
 
