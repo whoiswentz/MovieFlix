@@ -14,6 +14,7 @@
 		BD0370592A97C07600C2EF2C /* TitlePreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0370582A97C07600C2EF2C /* TitlePreviewViewController.swift */; };
 		BD03705B2A97EE2A00C2EF2C /* TitlePreviewVideModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD03705A2A97EE2A00C2EF2C /* TitlePreviewVideModel.swift */; };
 		BD1F2AE22A86C8180027F0E3 /* CollectionViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1F2AE12A86C8180027F0E3 /* CollectionViewTableViewCell.swift */; };
+		BD3AB0782AA016B000A7994D /* MovieFlixModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD3AB0762AA016AF00A7994D /* MovieFlixModel.xcdatamodeld */; };
 		BD83F3F82A8D83B700E06937 /* TitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD83F3F72A8D83B700E06937 /* TitleTableViewCell.swift */; };
 		BD83F3FA2A8D83DC00E06937 /* TitleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD83F3F92A8D83DC00E06937 /* TitleViewModel.swift */; };
 		BDB7ED4B2A83D50800C6AD42 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB7ED4A2A83D50800C6AD42 /* AppDelegate.swift */; };
@@ -40,6 +41,7 @@
 		BDC2AD5D2A8BEBD700C40B89 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = BDC2AD5C2A8BEBD700C40B89 /* SDWebImage */; };
 		BDC2AD5F2A8BEBD700C40B89 /* SDWebImageMapKit in Frameworks */ = {isa = PBXBuildFile; productRef = BDC2AD5E2A8BEBD700C40B89 /* SDWebImageMapKit */; };
 		BDC2AD612A8D0F1400C40B89 /* UpcomingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC2AD602A8D0F1400C40B89 /* UpcomingViewController.swift */; };
+		BDC480872AA018B7006FBD99 /* DataPersistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC480862AA018B7006FBD99 /* DataPersistenceManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +69,7 @@
 		BD0370582A97C07600C2EF2C /* TitlePreviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewViewController.swift; sourceTree = "<group>"; };
 		BD03705A2A97EE2A00C2EF2C /* TitlePreviewVideModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitlePreviewVideModel.swift; sourceTree = "<group>"; };
 		BD1F2AE12A86C8180027F0E3 /* CollectionViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewTableViewCell.swift; sourceTree = "<group>"; };
+		BD3AB0772AA016AF00A7994D /* MovieFlixModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MovieFlixModel.xcdatamodel; sourceTree = "<group>"; };
 		BD83F3F72A8D83B700E06937 /* TitleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTableViewCell.swift; sourceTree = "<group>"; };
 		BD83F3F92A8D83DC00E06937 /* TitleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewModel.swift; sourceTree = "<group>"; };
 		BDB7ED472A83D50800C6AD42 /* MovieFlix.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieFlix.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,6 +98,7 @@
 		BDC2AD572A8BC97400C40B89 /* TopRatedResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopRatedResponse.swift; sourceTree = "<group>"; };
 		BDC2AD592A8BE79400C40B89 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		BDC2AD602A8D0F1400C40B89 /* UpcomingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingViewController.swift; sourceTree = "<group>"; };
+		BDC480862AA018B7006FBD99 /* DataPersistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistenceManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +195,7 @@
 				BDC2AD472A89A85B00C40B89 /* TMDBApi.swift */,
 				BD0370522A96E3E200C2EF2C /* YoutubeApi.swift */,
 				BD0370542A96E5A800C2EF2C /* APIManager.swift */,
+				BDC480862AA018B7006FBD99 /* DataPersistenceManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 				BDB7ED532A83D50A00C6AD42 /* Assets.xcassets */,
 				BDB7ED552A83D50A00C6AD42 /* LaunchScreen.storyboard */,
 				BDB7ED582A83D50A00C6AD42 /* Info.plist */,
+				BD3AB0762AA016AF00A7994D /* MovieFlixModel.xcdatamodeld */,
 			);
 			path = MovieFlix;
 			sourceTree = "<group>";
@@ -416,12 +422,14 @@
 				BDB7ED822A84173100C6AD42 /* DownloadsViewController.swift in Sources */,
 				BDB7ED4B2A83D50800C6AD42 /* AppDelegate.swift in Sources */,
 				BD83F3FA2A8D83DC00E06937 /* TitleViewModel.swift in Sources */,
+				BD3AB0782AA016B000A7994D /* MovieFlixModel.xcdatamodeld in Sources */,
 				BDC2AD582A8BC97400C40B89 /* TopRatedResponse.swift in Sources */,
 				BDB7ED4D2A83D50800C6AD42 /* SceneDelegate.swift in Sources */,
 				BDC2AD4C2A8AAFB500C40B89 /* Title.swift in Sources */,
 				BDC2AD612A8D0F1400C40B89 /* UpcomingViewController.swift in Sources */,
 				BDC2AD4A2A8AAF6F00C40B89 /* TrendingTitleResponse.swift in Sources */,
 				BD03705B2A97EE2A00C2EF2C /* TitlePreviewVideModel.swift in Sources */,
+				BDC480872AA018B7006FBD99 /* DataPersistenceManager.swift in Sources */,
 				BDC2AD462A880F8900C40B89 /* DefaultUIButton.swift in Sources */,
 				BD0370532A96E3E200C2EF2C /* YoutubeApi.swift in Sources */,
 				BD0370592A97C07600C2EF2C /* TitlePreviewViewController.swift in Sources */,
@@ -787,6 +795,19 @@
 			productName = SDWebImageMapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		BD3AB0762AA016AF00A7994D /* MovieFlixModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BD3AB0772AA016AF00A7994D /* MovieFlixModel.xcdatamodel */,
+			);
+			currentVersion = BD3AB0772AA016AF00A7994D /* MovieFlixModel.xcdatamodel */;
+			path = MovieFlixModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BDB7ED3F2A83D50800C6AD42 /* Project object */;
 }

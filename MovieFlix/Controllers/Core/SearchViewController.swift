@@ -114,6 +114,28 @@ extension SearchViewController: UISearchResultsUpdating, SearchResultsViewContro
         }
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        
+        let title = titles[indexPath.row]
+        print(title)
+        guard let titleName = title.original_title ?? title.original_name else {return}
+        guard let overView = title.overview ?? title.overview else {return}
+        
+        YoutubeAPI.shared.searchMovie(with: titleName) { [weak self] result in
+            switch result {
+            case .success(let video):
+                DispatchQueue.main.async {
+                    let vc = TitlePreviewViewController()
+                    vc.configure(with: TitlePreviewViewModel(title: titleName, youtubeVideo: video, titleOverview: overView))
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                }
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
     func searchResultsViewControllerDidTapItem(_ viewModel: TitlePreviewViewModel) {
         DispatchQueue.main.async { [weak self] in
             let vc = TitlePreviewViewController()
